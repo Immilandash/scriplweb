@@ -1,9 +1,16 @@
 let toggler = document.querySelector(".toglerbtn");
 let menu = document.querySelector(".nav__menu");
-const buttonRight = document.getElementById('slideRight');
-const buttonLeft = document.getElementById('slideLeft');
-let mybutton = document.getElementById("myBtn");
-window.onscroll = function() {scrollFunction()};
+const buttonRight = document.getElementById('slideRight--testimonial');
+const buttonLeft = document.getElementById('slideLeft--testimonial');
+const buttonRightTeachers = document.getElementById('slideRight--teachers');
+const buttonLeftTeachers = document.getElementById('slideLeft--teachers');
+const textExpander1 = document.getElementById('text__expander1');
+const textExpander2 = document.getElementById('text__expander2');
+const textExpander3 = document.getElementById('text__expander3');
+const expandableText1 = document.querySelector('.faqp1');
+const expandableText2 = document.querySelector('.faqp2');
+const expandableText3 = document.querySelector('.faqp3');
+
 
 toggler.addEventListener("click", function(){
     if(menu.classList.contains("nav__menu")){
@@ -16,21 +23,53 @@ toggler.addEventListener("click", function(){
 
 
 buttonRight.onclick = function () {
-    document.getElementById('round').scrollLeft += 300;
+    document.getElementById('scrollable--testimonial').scrollLeft += 300;
   };
   buttonLeft.onclick = function () {
-    document.getElementById('round').scrollLeft -= 300;
+    document.getElementById('scrollable--testimonial').scrollLeft -= 300;
   };
   
-  function scrollFunction() {
-    if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 20) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
+
+  buttonRightTeachers.onclick = function () {
+    document.getElementById('scrollable--teachers').scrollLeft += 300;
+  };
+  buttonLeftTeachers.onclick = function () {
+    document.getElementById('scrollable--teachers').scrollLeft -= 300;
+  };
+
+  textExpander1.addEventListener("click", function(){
+    if(expandableText1.classList.contains("faqp1"))
+    {
+        expandableText1.classList.replace("faqp1", "faqpV");
     }
-  }
+    else
+    {
+        expandableText1.classList.replace("faqpV", "faqp1"); 
+    }
+  });
+
+
+  textExpander2.addEventListener("click", function(){
+    if(expandableText2.classList.contains("faqp2"))
+    {
+        expandableText2.classList.replace("faqp2", "faqpV");
+    }
+    else
+    {
+        expandableText2.classList.replace("faqpV", "faqp2"); 
+    }
+  });
+
+
+  textExpander3.addEventListener("click", function(){
+    if(expandableText3.classList.contains("faqp3"))
+    {
+        expandableText3.classList.replace("faqp3", "faqpV");
+    }
+    else
+    {
+        expandableText3.classList.replace("faqpV", "faqp3"); 
+    }
+  });
+
   
-  function topFunction() {
-    document.body.scrollTop -= 3000; // For Safari
-    document.documentElement.scrollTop -= 2000; // For Chrome, Firefox, IE and Opera
-  }

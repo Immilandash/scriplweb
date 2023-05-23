@@ -58,6 +58,7 @@ a{
     text-decoration: none;
     color: var(--bodytex--color);
     font-family: 'Sora', sans-serif;
+    font-size: 1.5rem;
 }
 .index__header{
     background: var(--bg--primary);
@@ -114,6 +115,13 @@ a{
     width: fit-content;
     border-radius: 5px;
 }
+.btn--dark{
+    background: black;
+    color: whitesmoke;
+    padding: 1rem;
+    border: none;
+    outline: none;
+}
 .btn--primary--framed{
     padding: 1rem 2rem;
     font-size: x-small;
@@ -152,11 +160,21 @@ a{
 }
 .hero__grid__image{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
 }
+
 .hero__grid__image img{
     width: 100%;
     margin: 0;
     padding: 0 ;
+}
+.hero__greybox{
+    height: 40vh;
+    width: 100%;
+    background: #D9D9D9;
+    margin: 2rem 0;
 }
 .engineers{
     text-align: center;
@@ -179,6 +197,7 @@ a{
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
     display: flex;
     color: black;
+    overflow: hidden;
 }
 .cousre__card{
     padding: 1rem 0;
@@ -206,7 +225,12 @@ a{
     padding: 1rem;
     height: 7rem;
     width: 7rem;
+}
+.circle--white{
     background: white;
+}
+.circle--grey{
+    background: var(--my--grey);
 }
 
 /* section  */
@@ -242,15 +266,27 @@ a{
 .box--accent{
     background: var(--bg--accent);
 }
+.box--grey{
+    background: #D8D8D8;
+}
+.card__content{
+    padding: 1rem;
+}
 
 /* scrollable  */
-.employers{
+.employers, .teachers, .students, .faqs, .stories{
     text-align: left;
-    background: var(--bg--primary);
     padding: 2rem 0;
 }
-.employers p, .employers h2{
-    margin: 1rem 10%;
+.employers{
+    background: var(--bg--primary);
+}
+.employers > p, .employers > h3,
+ .teachers > p, .teachers > h3, 
+ .students > p, .students > h3, 
+ .faqs > p, .faqs > h3, 
+ .stories > p, .stories h3{
+    margin: 1rem 5%;
 }
 .card__testimonials{
     padding: 0;
@@ -259,7 +295,8 @@ a{
     padding: 0;
     margin: 0;
 }
-  .employer__card{
+
+  .employer__card, .students__card{
     max-width: 100%;
     padding: 2rem;
     border: 0;
@@ -273,7 +310,7 @@ a{
     gap: 2rem 0;
     align-items: start;
     justify-content: start;
-    background: whitesmoke;
+    background: white;
   } 
   .card__footer{
     display: flex;
@@ -299,6 +336,7 @@ a{
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
+    background: var(--my--grey);
   }
   .profile__circle img{
     width: 100%;
@@ -341,26 +379,26 @@ a{
     color: #c59b08;
 }
 
-.scrollable button{
-    background: rgba(74, 72, 72, 0.2);
-    position:sticky;
+.slideLeft, .slideRight{
     border: none;
-    color: whitesmoke;
     font-size: 2em;
-    z-index: 90;
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
-    color: whitesmoke;
+    color: black;
+    border-radius: 50%;
+    background: none;
+    border: 1px solid var(--my--grey);
 }
-.scrollable button:hover{
-    background-color: rgb(74, 72, 72)
+.slider__btns{
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    justify-content: center;
 }
-#slideLeft{
-    left: 10px;
+.slideLeft:hover, .slideRight:hover{
+    border: 1px solid var(--color--primary);
 }
-#slideRight{
-    right: 10px;
-}
+
 
 
 .index__footer{
@@ -403,6 +441,9 @@ a{
     padding: 1rem;
     border-radius: 5px;
 }
+.footer__form__inputs textarea{
+    height: 10rem;
+}
 .btn--deepaccent--filled{
     background: red;
     border: none;
@@ -419,7 +460,7 @@ a{
 }
 
 
-.footer__foot{
+.footer__foot, .footer__foot--grey{
     width: 100%;
     padding: 1rem 2rem;
 }
@@ -434,26 +475,42 @@ a{
     gap: 1rem;
     margin: 2rem 0;
 }
-.footer__foot .fa-brands{
+.footer__foot .fa-brands,
+ .footer__foot--grey .fa-brands{
     padding: 1rem;
-    background: var(--color--primary);
     border-radius: 50%;
-    color: white;
     margin: 0 5px;
+}
+.footer__foot .fa-brands{
+    color: white;
+    background: var(--color--primary);
+}
+.footer__foot--grey .fa-brands{
+    color: black;
+    background: grey;
 }
 .footer__foot .fa-brands:hover{
     transform: scale(1.1);
 }
-.down{
-    border-top: 2px solid var(--my--grey);
+.down, .down--grey{
     margin-top: 1rem;
     padding: 1rem 0;
 }
+.down{
+    border-top: 2px solid var(--my--grey);
+}
+.down--grey{
+    border-top: 1px solid black;
+}
+
 .footer__anchors{
     margin: 2rem 0;
     display: flex;
     gap: 1rem;
     justify-content: flex-end;
+}
+.footer__anchors a:hover{
+    text-decoration: underline;
 }
   @media screen and (min-width: 1000px) {
      /* plan cards  */
@@ -474,6 +531,7 @@ a{
     }
     .plan__card2{
         margin-left: auto;
+ 
     }
 }
 
@@ -522,7 +580,9 @@ a{
         height: 70vh;
         width: auto;
     }
-    
+    .hero__greybox{
+        height: 60vh;
+    }
     /* cards section  */
     .cards{
          position: absolute;
@@ -542,10 +602,17 @@ a{
 
     /* employer  */
 
-    .employer__card{
+    .employer__card, .students__card{
         flex-basis: 30%;
     }
 
+    .employers > p, .employers > h3,
+ .teachers > p, .teachers > h3, 
+ .students > p, .students > h3, 
+ .faqs > p, .faqs > h3,
+ .stories > p, .stories h3{
+    margin: 1rem 10%;
+}
     /* footer  */
     .footer__card{
         flex-direction: row;
@@ -567,7 +634,7 @@ a{
         width: auto;
         margin: 0 auto 0 0;
     }
-    .footer__foot{
+    .footer__foot, .footer__foot--grey{
         width: 70%;
         margin: 5rem auto 0;
     }
@@ -578,3 +645,163 @@ a{
     }
 }
 
+
+/* students page  */
+
+
+.student__header{
+    background: #F0F0F0;
+}
+.engineers__p--students{
+    margin-top: 10rem;
+}
+
+.scrollable--teachers{
+    margin: 0 auto;
+    padding: 2rem 0;
+    flex-basis: 15rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.teachers__card{
+    max-width: 15rem;
+    padding: 2rem;
+    border: 0;
+    margin: 5rem 0;
+    flex-basis: 80%;
+    flex-grow: 5;
+    flex-shrink: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    align-items: center;
+}
+.teachers__circle{
+    height: 10rem;
+    width: 10rem;
+    background: var(--my--grey);
+    align-self: center;
+    border-radius: 50%;
+}
+.teachers__name{
+    margin-top: 1rem;
+}
+.teachers__field{
+    color: var(--bodytex--color);
+    line-height: 0;
+    margin: 1rem 0;
+}
+
+.faqs{
+    margin-top: 4rem;
+}
+.faqp1, .faqp2, .faqp3{
+    display: none;
+}
+.expandable__textbox{
+    width: 90%;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.082);
+    margin: 4rem auto;
+}
+.expands{
+    border-bottom: 1px solid var(--my--grey);
+    padding: 2rem;
+}
+.expands:last-of-type{
+    border-bottom: none;
+}
+
+.expander{
+    display: flex;
+    justify-content: space-between;
+}
+.expander__btn{
+    border-radius: 50%;
+    padding: 10px;
+    background: none;
+    border: 1px solid var(--my--grey);
+    outline: none;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .expandable__textbox{
+        width: 50%;
+    }
+    .expands{
+        padding: 2rem;
+    }
+    .scrollable--teachers{
+        width: 70%;
+    }
+}
+
+.stories__cards{
+    display: flex;
+    gap: 2rem;
+    width: 90%;
+    margin: 3rem auto;
+    flex-direction: column;
+}
+.stories__card{
+    width: auto;
+    position: relative;
+    cursor: pointer;
+}
+.stories__card:hover> .stories__card__date{
+    opacity: 1;
+    transition: opacity,  1s ease-in-out;
+}
+.stories__video{
+    object-fit: cover;
+    width: 100%;
+    filter: grayscale(100);
+}
+.stories__card__date, .stories__card__text{
+    position: absolute;
+}
+.stories__card__date{
+    opacity: 0;
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    top: 1rem;
+    left: 1rem;
+}
+.stories__card__text{
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+}
+
+.contact{
+    padding: 1rem;
+    background: #D8D8D8;
+    margin: 5rem auto 0;
+    padding: 2rem;
+}
+.footer--grey{
+    background: var(--my--grey);
+    padding: 4rem;
+}
+@media screen and (min-width: 768px) {
+    .stories__cards{
+        width: 80%;
+        height: 30rem;
+        padding: 0;
+        flex-direction: row;
+    }
+    .contact{
+        width: 50%;
+        position: relative;
+        z-index: 9999;
+        bottom: -5rem;
+    }
+    .contact form{
+        margin: 5rem auto;
+        width: 100%;
+    }
+}

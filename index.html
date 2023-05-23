@@ -33,10 +33,13 @@
           </div>
         </div>
         <ul class="nav__menu">
-          <li class="nav__menu__list"><a href="">item 1</a></li>
-          <li class="nav__menu__list"><a href="">item 2</a></li>
+          <li class="nav__menu__list"><a href="">About Us</a></li>
+          <li class="nav__menu__list"><a href="">Blog</a></li>
           <div class="nav__btn">
-            <a href="" class="btn btn--primary btn--primary--framed">
+            <a
+              href="pages/studentindex.html"
+              class="btn btn--primary btn--primary--framed"
+            >
               I'M A STUDENT
             </a>
           </div>
@@ -56,12 +59,12 @@
           </button>
         </div>
         <div class="hero__grid__image">
-          <img src="img/grid img.jfif" alt="" />
+          <img src="img/pic.svg" alt="" />
         </div>
       </div>
       <div class="engineers">
         <p class="engineers__p">HIRE NOW</p>
-        <h2 class="engineers__heading">Engineers</h2>
+        <h3 class="engineers__heading">Engineers</h3>
         <p class="engineers__p">
           Educational methods include teaching, trairing, storytelling,
           disccussion and directed research
@@ -93,9 +96,9 @@
     </div>
 
     <p class="engineers__p">HIRE EASY</p>
-    <h2 class="engineers__heading">Here's how we do it</h2>
+    <h3 class="engineers__heading">Here's how we do it</h3>
 
-    <div class="plan__cards">
+    <section class="plan__cards">
       <div class="card plan__card plan__card1">
         <div class="card__box box--primary">
           <h2>01</h2>
@@ -132,16 +135,14 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="employers">
+    <!-- emplyers section  -->
+
+    <section class="employers">
       <p>Testimonials</p>
-      <h2>Employers Say</h2>
-      <div class="scrollable md-12" id="round">
-        <!-- slider btn  -->
-        <button id="slideLeft" type="button">
-          <i class="fa fa-angle-double-left"></i>
-        </button>
+      <h3>Employers Say</h3>
+      <div class="scrollable md-12" id="scrollable--testimonial">
         <!-- card 1 -->
         <div class="card employer__card">
           <div class="card__header">
@@ -278,12 +279,17 @@
             <h4>John Deo</h4>
           </div>
         </div>
-        <!-- scroller btns -->
-        <button id="slideRight" type="button">
-          <i class="fa fa-angle-double-right"></i>
+      </div>
+      <!-- scroller btns -->
+      <div class="slider__btns">
+        <button id="slideLeft--testimonial" class="slideLeft" type="button">
+          <i class="fa fa-angle-left"></i>
+        </button>
+        <button id="slideRight--testimonial" class="slideRight" type="button">
+          <i class="fa fa-angle-right"></i>
         </button>
       </div>
-    </div>
+    </section>
 
     <!-- footer  -->
     <footer>
@@ -331,36 +337,35 @@
           </form>
         </div>
         <div class="footer__foot">
-         <div class="up">
-          <div class="footer__logo"><h4>SCRIPL</h4></div>
+          <div class="up">
+            <div class="footer__logo"><h4>SCRIPL</h4></div>
 
-          <div class="footer__menu">
-            <p>Menu</p>
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">fAQs</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
+            <div class="footer__menu">
+              <p>Menu</p>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">fAQs</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="blank"></div>
+
+            <div class="footer__socialmedia">
+              <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
           </div>
-
-          <div class="blank"></div>
-
-          <div class="footer__socialmedia">
-            <a href=""><i class="fa-brands fa-facebook-f"></i></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></i></a>
-            <a href=""><i class="fa-brands fa-twitter"></i></i></a>
+          <div class="down">
+            <p>Copyright &#169; 2021 Laaqiq. All Rights Reserved.</p>
+            <div class="footer__anchors">
+              <a href="#">Terms of Use</a>
+              <a href="#">Privacy Policy</a>
+            </div>
           </div>
         </div>
-        <div class="down">
-         <p>Copyright &#169; 2021 Laaqiq. All Rights Reserved.</p>
-         <div class="footer__anchors">
-           <a href="#">Terms of Use</a>
-           <a href="#">Privacy Policy</a>
-         </div>
-         </div>
-
-         </div>
       </div>
     </footer>
     <script src="js/index.js"></script>
