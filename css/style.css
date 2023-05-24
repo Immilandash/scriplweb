@@ -421,6 +421,10 @@ a{
     box-shadow: none;
     border-radius: 0;
 }
+body{
+    box-sizing: border-box;
+    width: 100vw;
+}
 .footer__card a{
     text-decoration: underline;
     color: white;
