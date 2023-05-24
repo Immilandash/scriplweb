@@ -40,7 +40,9 @@ html{
     font-family: 'poppins', sans-serif; 
     text-align: center;
 }
-
+.fa-angle-left, .fa-angle-right{
+    color: blue;
+}
 body::-webkit-scrollbar {
     width: 0.3em;
   }
@@ -61,8 +63,12 @@ a{
     font-size: 1.5rem;
 }
 .index__header{
-    background: var(--bg--primary);
     position: relative;
+    /* background: url("../img/Frame\ 3.png"); */
+    background: var(--bg--primary);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .navbar{
     padding: 1rem;
@@ -297,11 +303,10 @@ a{
 }
 
   .employer__card, .students__card{
-    max-width: 100%;
+    width: 40rem;
     padding: 2rem;
     border: 0;
     margin: 5rem 0;
-    flex-basis: 80%;
     flex-grow: 0;
     flex-shrink: 0;
     cursor: pointer;
@@ -408,7 +413,8 @@ a{
 .footer__card{
     max-width: 100%;
     padding: 2rem;
-    background: var(--color--primary) ;
+    background: url("../img/Frame\ 7.png") ;
+    background-size: 100% 100%;
     color: white;
     margin: 0 auto;
     flex-direction: column;
@@ -601,9 +607,9 @@ a{
    
 
     /* employer  */
-
-    .employer__card, .students__card{
-        flex-basis: 30%;
+    .scrollable--testimonial{
+        width: 80%;
+        margin: 0 auto;
     }
 
     .employers > p, .employers > h3,
@@ -642,6 +648,9 @@ a{
         flex-direction: row;
         flex-basis: 25%;
         justify-content: space-between;
+    }
+    .index__header{
+        background: url("../img/Frame\ 3.png");
     }
 }
 
