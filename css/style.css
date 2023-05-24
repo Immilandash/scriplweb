@@ -413,7 +413,7 @@ a{
 .footer__card{
     max-width: 100%;
     padding: 2rem;
-    background: url("../img/Frame\ 7.png") ;
+    background: var(--color--primary);
     background-size: 100% 100%;
     color: white;
     margin: 0 auto;
@@ -424,6 +424,7 @@ a{
 body{
     box-sizing: border-box;
     width: 100vw;
+    overflow-x: hidden;
 }
 .footer__card a{
     text-decoration: underline;
@@ -631,6 +632,7 @@ body{
         width: 70%;
         border-radius: 2rem;
         text-align: left;
+    background: url("../img/Frame\ 7.png") 
     }
     .footer__card__content, .footer__form{
         width: 50%;
