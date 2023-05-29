@@ -153,8 +153,12 @@ a{
     padding: 1.5rem 3rem;
 }
 .hero__grid__p, .engineers__p {
-    max-width: 50ch;
     line-height: 1.5;
+}
+@media screen and (min-width: 768px) {
+    .hero__grid__p{
+        max-width: 50ch;
+    }
 }
 .engineers__p{
     margin: 1rem auto;
@@ -169,6 +173,7 @@ a{
     display: flex;
     justify-content: center;
     padding: 1rem;
+    margin-top: 4rem;
 }
 
 .hero__grid__image img{
@@ -581,18 +586,13 @@ body{
         max-width: 80%;
         margin: 0 auto;
         text-align: left;
+        gap: 0;
+    }
+    .hero__grid__content{
+        width: 60%;
     }
     .hero__grid__image{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .hero__grid__image img{
-        height: 70vh;
-        width: auto;
-    }
-    .hero__greybox{
-        height: 60vh;
+        width: 40%;
     }
     /* cards section  */
     .cards{
